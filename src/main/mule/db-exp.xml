@@ -164,7 +164,8 @@ output application/json
         </ee:transform>
     </flow>
     <flow name="post:\dbcreate:application\json:db-exp-config">
-        <ee:transform>
+        <logger level="INFO" doc:name="Logger" doc:id="d76d094a-c6ee-4dd5-a24a-262ff8d1e987" message="#[payload]"/>
+		<ee:transform>
             <ee:message>
                 <ee:set-payload><![CDATA[%dw 2.0
 output application/json
